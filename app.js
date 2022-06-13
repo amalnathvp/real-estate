@@ -6,14 +6,14 @@ var logger = require('morgan');
 
 var adminRouter = require('./routes/admin');
 var usersRouter = require('./routes/users');
-
+var db = require('./config/connection')
 var fileUpload = require('express-fileupload')
 var hbs = require('express-handlebars');
 var session= require('express-session')
 
 
 var app = express();
-var db = require('./config/connection')
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
