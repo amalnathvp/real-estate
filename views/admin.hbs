@@ -1,0 +1,102 @@
+<button type="button" class="btn btn-dark float-right">
+<a href="/admin/add-photo">Upload Photos
+</a>
+
+</button> 
+
+<br>
+<br>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th>Image</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each photos}}
+    <tr>
+      <td>{{this.photo_name}}</td>
+      <td><img style ="width: 50px; height:50px" src="/images/{{this._id}}.jpg" alt=""> </td>
+      <td>
+        {{!-- <a href="/admin/edit-banner/{{this._id}}">
+        <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit">Edit</button>
+        </a> --}}
+        <a href="/admin/delete-photo/{{this._id}}">
+        <button class="btn btn-danger btn-sm rounded-0" onclick="return confirm('Delete {{this.photo_name}} ?') " type="button" data-toggle="tooltip" data-placement="top" title="Delete">Delete</button>
+        </a>
+      </td>
+    </tr>
+    
+  {{/each}}
+  </tbody>
+</table>     
+
+<button type="button" class="btn btn-dark float-right">
+<a href="/admin/add-slide">Upload Slides
+</a>
+
+</button> 
+
+<br>
+<br>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th> Image</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each slides}}
+    <tr>
+      <td>{{this.slide_name}}</td>
+      <td><img style ="width: 50px; height:50px" src="/images/{{this._id}}.jpg" alt=""> </td>
+      <td>
+        {{!-- <a href="/admin/edit-banner/{{this._id}}">
+        <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit">Edit</button>
+        </a> --}}
+        <a href="/admin/delete-slide/{{this._id}}">
+        <button class="btn btn-danger btn-sm rounded-0" onclick="return confirm('Delete {{this.slide_name}} ?') " type="button" data-toggle="tooltip" data-placement="top" title="Delete">Delete</button>
+        </a>
+      </td>
+    </tr>
+    
+  {{/each}}
+  </tbody>
+</table>   
+
+<h2><b>enquiry</b></h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Subject</th>
+      <th scope="col">Message</th>
+    </tr>
+  </thead>
+  {{#each contacts}}
+  <tbody>
+    <tr>
+      <td> {{this.first_name}}  {{this.last_name}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.subject}}</td>
+      <td>{{this.message}}</td>
+    </tr>
+  </tbody>
+    {{/each}}
+</table>
+<br><br>
+<h2><b>subscription emaildetails</b></h2>
+     {{#each email}}
+      <h3>{{this.email}}</h3>
+      {{/each}}
+

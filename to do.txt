@@ -1,0 +1,6 @@
+slider - photo upload (done)
+sevice and about - remove readmore (done)
+upload photos in project (done)
+admin login
+contact - to backend
+servie -add content
