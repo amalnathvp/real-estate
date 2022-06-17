@@ -470,6 +470,8 @@ a.service-btn:hover::after{background:#ffa64d;}
 .portfolio-grids {
   float: left;
   width: 33.33%;
+  padding: 5px;
+
 }
 .portfolio-grid {
   overflow: hidden;
