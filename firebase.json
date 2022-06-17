@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "realestateconstruction",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

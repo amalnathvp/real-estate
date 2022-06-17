@@ -3,7 +3,7 @@ const state={
     db:null
 }
 module.exports.connect=function(done){
-    const url= 'mongodb+srv://nibin:arsenewenger12@cluster0.1uenr.mongodb.net/project'
+    const url= 'mongodb://localhost:27017'
     const dbname='project'
 
     mongoClient.connect(url,(err,data)=>{
